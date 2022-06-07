@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Product List App</h2>
+      <h3>using Javascript, HTML and CSS</h3>
+      <p id="instruction">
+        Create a customer input system. <br />
+        You can look to using any kind of tools you want and we recommend
+        looking at w3Schools.com for additional information on how to add users
+        to the list below.
+        <br />
+        <br />
+        You will notice some in place scaffolding to help get you there in
+        creating a product input system. The Javascript file will only reference
+        an array, a function, and an object. You must include the array of
+        products after adding them inside the console, look inside the js file
+        for more details.
+        <br />
+        <br />
+        Hint: Look for a way to add items to each individual cell of the div
+        with the ID of output. Also find a way to prevent users from adding an
+        empty name field or customer id.
+      </p>
+    </div>
+    <div class="container2">
+      <div>
+        <form onsubmit="return false">
+          <label for="product">Product Name</label>
+          <input type="text" id="product" autocomplete="off" />
+          <input class="btn" type="submit" id="list" onclick="addProduct()" />
+        </form>
+        <p>Products: <a id="prList"></a></p>
+        <script>
+          var productArray = [];
+          function addProduct() {
+            var thing = document.getElementById("product").value;
+            productArray.push(thing);
+            console.log(productArray);
+            console.log(thing);
+            document.getElementById("prList").innerHTML = productArray;
+          }
+        </script>
+      </div>
+      <div id="output"></div>
+    </div>
+  </body>
+</html>

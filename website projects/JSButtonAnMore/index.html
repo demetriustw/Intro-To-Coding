@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Button Project</title>
+  </head>
+  <body class="main-content">
+    <div class="container">
+      <img src="http://placekitten.com/300/200" alt="Kitten" />
+      <p class="instruction">
+        This project is inside a small container, you can click to add to the
+        counter or hold down the button to speed up the counter.
+      </p>
+      <h2 id="h22">Select your color <span id="colorOutput"></span></h2>
+      <label>red:</label>
+      <input type="range" id="rangeRed" value="0" min="0" max="255" />
+      <label>green:</label>
+      <input type="range" id="rangeGreen" value="139" min="0" max="255" />
+      <br />
+      <label>blue:</label>
+      <input type="range" id="rangeBlue" value="168" min="0" max="255" />
+      <br />
+
+      <button id="myBtn" class="btn" onclick="btnPressed()">Button</button>
+      <p>Clicks: <a id="clicks">0</a></p>
+
+      <script>
+        var cluck = 0;
+        function btnPressed() {
+          cluck++;
+          document.getElementById("clicks").innerHTML = cluck;
+        }
+      </script>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

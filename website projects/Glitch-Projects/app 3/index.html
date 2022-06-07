@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<htlm>
+  <head>
+    <title>"First" Website</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+
+    <script>
+      var colors = ["#4f0000", "green", "purple"];
+      var colorIndex = 0;
+      function changeColor() {
+        var col = document.getElementById("body");
+        if (colorIndex >= colors.length) {
+          colorIndex = 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        colorIndex++;
+      }
+    </script>
+  </head>
+  <body id="body">
+    <div class="main-content">
+      <img
+        src="https://cdn.glitch.me/2f59e0a9-3743-45ab-a34f-6deb6f7e7e1c%2Fslogan-bla-talking-fact-fake-260nw-1846617556.jpg.webp?v=1638464373194"
+        alt="Image of BLA BLA BLA"
+      />
+      <h1>This is BLA</h1>
+      <h2>BLLAAA</h2>
+
+      <p>
+        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+        bla bla bla blee bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+        bla bla bla bla bla bla blee blee bla bla bla bla bla bla bla bla bla
+        bla bla bla bla bla bla bla bla bla bla
+      </p>
+
+      <p>
+        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+        bla bla
+      </p>
+
+      <button class="dipped" onclick="changeColor();">Change color</button>
+
+      <h3>This is BLEE</h3>
+
+      <p>
+        blee blee blee blee blee blee blee blee blee blee blee blee blee blee
+        blee blee blee blee blee blee blee blee blee blee blee blee blee blee
+        blee blee blee blee blee blee blee blee blee blee blee blee blee blee
+        blee blee blee blee blee blee blee blee
+      </p>
+
+      <p>
+        this is link
+        <a href="wanted.html">IS THIS WHAT YOU WANTED</a>
+      </p>
+      <p>this more link <a href="morelink.html">MORE???</a></p>
+    </div>
+  </body>
+</htlm>

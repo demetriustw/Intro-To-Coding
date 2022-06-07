@@ -1,0 +1,140 @@
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ol,
+ul,
+li,
+a {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #5f5f5f;
+  background-image: url(images/gobbler.png);
+  background-position: top left;
+  background-repeat: repeat;
+  padding: 20px 20px 20px 20px;
+}
+
+h1 {
+  margin: 10px 0 15px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+h2 {
+  margin: 10px 0 20px 0;
+  text-align: center;
+}
+
+h3 {
+  margin: 15px 0 15px 0;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 3px;
+  color: #7facaa;
+}
+
+ul,
+ol {
+  padding: 0 0 0 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+ul li {
+}
+
+p {
+  padding: 10px 0 0 0;
+}
+
+.nav {
+  padding-left: 0;
+  margin: 5px 0 20px 0;
+  text-align: center;
+}
+
+.nav a {
+  color: #0000af;
+  text-decoration: none;
+}
+
+.nav li {
+  display: inline;
+}
+
+.recipes {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recipes li {
+  background: #ffffff url(images/li-bg.png) top left repeat;
+  border: 1px solid #b56663;
+  padding-left: 15px;
+}
+
+.recipes h3 {
+  border-bottom: 0;
+}
+
+.recipes a {
+  color: #7facaa;
+  text-decoration: none;
+}
+
+.header {
+  padding: 10px 10px 10px 10px;
+  background-color: #b56663;
+}
+
+.header a {
+  color: #ffffff;
+}
+
+.header img {
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.main-content {
+  box-shadow: 0 15px 10px #000;
+  background: #ffffff url(images/crossword.png) top left repeat;
+  width: 500px;
+  padding: 20px 20px 20px 20px;
+  border: 1px solid #dddddd;
+  margin: 30px auto 0 auto;
+}
+
+.photos {
+  list-style-type: none;
+  padding: 0;
+}
+
+.photos li {
+  display: inline;
+  padding-left: 11px;
+}
+
+.featured-image {
+  width: 630;
+  height: 246px;
+  background: #ffffff url(images/featured-cake.png) top left no-repeat;
+  margin: 0;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 5px 0 5px 15px;
+  text-transform: uppercase;
+}

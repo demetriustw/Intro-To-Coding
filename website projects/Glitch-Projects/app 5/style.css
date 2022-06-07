@@ -1,0 +1,49 @@
+.main-content {
+  box-shadow: 0 15px 10px #000;
+  background: gray url(images/crossword.png) top left repeat;
+  width: 600px;
+  padding: 20px 20px 20px 20px;
+  border: 1px solid #dddddd;
+  margin: 30px auto 0 auto;
+}
+
+.container {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.container img {
+  margin: 15px auto 0 140px;
+}
+
+.container input {
+  margin: 15px 20px 0 0;
+}
+
+.container label {
+  margin: 20px 20px 20px 20px;
+}
+
+.instruction {
+  margin: 40px 25px 25px 40px;
+  font: 20px bold;
+}
+
+.container button {
+  width: 200px;
+  height: 60px;
+  background: red;
+  margin: auto auto auto 190px;
+}
+
+.button {
+  margin: 10px auto auto 235px;
+  font: 25px bold;
+}
+
+.syc {
+  margin: auto auto auto 200px;
+}
