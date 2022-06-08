@@ -282,18 +282,19 @@ const keys = {
   ArrowDown: {
     pressed: false,
   },
-  Control: {
+  Shift: {
     pressed: false,
   },
 };
-
+let lastPress = null;
+let volumeValue = 1
 window.addEventListener("keydown", (event) => {
   if (pressed === true) {
     switch (event.key) {
       case "ArrowUp":
         if (!keys.ArrowUp.pressed) {
           keys.ArrowUp.pressed = true;
-          if (!keys.Control.pressed) {
+          if (!keys.Shift.pressed) {
             lastVolume += 0.25;
           } else {
             lastVolume += 0.1;
@@ -302,30 +303,39 @@ window.addEventListener("keydown", (event) => {
             lastVolume = 1;
           }
         }
+            
         video.volume = lastVolume;
         audio.volume = lastVolume;
         volumeBar.style.width = `${lastVolume * 100}%`;
         soundIcon(lastVolume);
-
         break;
       case "ArrowDown":
         if (!keys.ArrowDown.pressed) {
           keys.ArrowDown.pressed = true;
-          if (!keys.Control.pressed) {
-            lastVolume -= 0.25;
-          } else if (lastVolume <= 0.1) {
-            toggleMute();
-          } else {
-            lastVolume -= 0.1;
-          }
+            if (!keys.Shift.pressed) {
+                if (lastPress === "ArrowDown" && lastVolume <= 0.25) {
+                    
+                }
+                lastVolume += -0.25;
+            } else {
+                lastVolume += -0.1;
+            }
+            if (lastVolume <= 0.05) {
+                lastVolume = 0
+                toggleMute()
+            }
+
         }
+            
+        console.log(lastVolume)
         video.volume = lastVolume;
         audio.volume = lastVolume;
         volumeBar.style.width = `${lastVolume * 100}%`;
         soundIcon(lastVolume);
+        
         break;
-      case "Control":
-        keys.Control.pressed = true;
+      case "Shift":
+        keys.Shift.pressed = true;
         break;
       case "ArrowLeft":
         if (!keys.ArrowLeft.pressed) {
@@ -353,17 +363,18 @@ window.addEventListener("keydown", (event) => {
         break;
     }
     console.log(event.key);
-    console.log(lastVolume);
   }
 });
 
 window.addEventListener("keyup", (event) => {
   switch (event.key) {
     case "ArrowUp":
+      lastPress = "ArrowUp";
       keys.ArrowUp.pressed = false;
       break;
 
     case "ArrowDown":
+      lastPress = "ArrowDown";
       keys.ArrowDown.pressed = false;
       break;
 
@@ -375,8 +386,8 @@ window.addEventListener("keyup", (event) => {
       keys.ArrowRight.pressed = false;
       break;
 
-    case "Control":
-      keys.Control.pressed = false;
+    case "Shift":
+      keys.Shift.pressed = false;
       break;
   }
 });
